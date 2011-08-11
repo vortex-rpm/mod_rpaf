@@ -28,14 +28,13 @@ distributed with Apache2 from version 2.0.36.
 %install
 rm -rf %{buildroot}
 install -D -p -m 0755 .libs/mod_rpaf-2.0.so %{buildroot}%{_libdir}/httpd/modules/mod_rpaf-2.0.so
-%ifarch x86_64
 touch rpaf.conf
+%ifarch x86_64
 echo "LoadModule rpaf_module /usr/lib64/httpd/modules/mod_rpaf-2.0.so" >> rpaf.conf
 echo "RPAFenable On" >> rpaf.conf
 echo "RPAFproxy_ips 127.0.0.1" >> rpaf.conf
 %endif
 %ifarch i386
-touch rpaf.conf
 echo "LoadModule rpaf_module /usr/lib/httpd/modules/mod_rpaf-2.0.so" >> rpaf.conf
 echo "RPAFenable On" >> rpaf.conf
 echo "RPAFproxy_ips 127.0.0.1" >> rpaf.conf
