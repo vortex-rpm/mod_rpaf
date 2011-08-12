@@ -4,6 +4,7 @@ Summary:	Reverse proxy add forward module for Apache
 Name:		mod_rpaf
 Version:	0.6
 Release:	1.vortex%{?dist}
+Vendor:		Vortex RPM
 License:	ASL 1.0
 Group:		System Environment/Daemons
 URL:		http://stderr.net/apache/rpaf/
